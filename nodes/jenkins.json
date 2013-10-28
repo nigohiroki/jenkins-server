@@ -1,0 +1,7 @@
+{
+  "run_list" :[
+    "git",
+    "java",
+    "jenkins"
+  ]
+}
