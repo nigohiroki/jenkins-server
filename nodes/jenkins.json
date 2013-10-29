@@ -2,6 +2,7 @@
   "run_list" :[
     "git",
     "java",
-    "jenkins"
+    "jenkins",
+    "rbenv"
   ]
 }

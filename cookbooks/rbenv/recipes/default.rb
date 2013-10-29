@@ -37,12 +37,13 @@ template "rbenv.sh" do
   source "rbenv.sh.erb"
 end
 
-%w{make gcc zlib-devel openssl-devel readline-devel ncurses-devel gdbm-devel db4-devel libffi-devel tk-devel libyaml-devel}.each do pkg
+%w{make gcc zlib-devel openssl-devel readline-devel ncurses-devel gdbm-devel db4-devel libffi-devel tk-devel}.each do |pkg|
   yum_package pkg do
     action :install
   end
 end
 
+=begin
 execute "rbenv install #{node['ruby']['versions']}" do
   command "source /etc/profile.d/rbenv.sh; rbenv install #{node['ruby']['versions']}"
   action :run
@@ -58,3 +59,4 @@ execute "rbenv rehash" do
   command "source /etc/profile.d/rbenv.sh; rbenv rehash"
   action :run
 end
+=end
