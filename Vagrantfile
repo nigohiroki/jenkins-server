@@ -92,7 +92,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 #    chef.add_recipe "java"
 #    chef.add_recipe "jenkins"
 #    chef.add_recipe "rbenv"
-    chef.add_recipe "postfix"
+#    chef.add_recipe "postfix"
   #
   #   # You may also specify custom JSON attributes:
   #   chef.json = { :mysql_password => "foo" }
