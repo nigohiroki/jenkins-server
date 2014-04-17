@@ -5,6 +5,14 @@ bash "install_nginx" do
   not_if "rpm -q nginx"
 end
 
+template "nginx.conf" do
+  path  "/etc/nginx/nginx.conf"
+  owner "root"
+  group "root"
+  mode "0644"
+  source "nginx.conf.erb"
+end
+
 package "nginx" do
   action :install
 end
