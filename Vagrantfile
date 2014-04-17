@@ -88,6 +88,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.data_bags_path = "../my-recipes/data_bags"
       chef.add_recipe "git"
       chef.add_recipe "phantomjs"
+      chef.add_recipe "nginx"
   #
   #   # You may also specify custom JSON attributes:
   #   chef.json = { :mysql_password => "foo" }

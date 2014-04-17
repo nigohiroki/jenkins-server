@@ -27,6 +27,7 @@ end
 bash "symbolic link" do
   user "root"
   code <<-EOH
-    ln -s /usr/local/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
+    ln -s #{node['phantomjs']['path']}/phantomjs /usr/bin/phantomjs
   EOH
+  not_if { File.exists?("/usr/bin/phantomjs") }
 end
